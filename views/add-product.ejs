@@ -1,0 +1,30 @@
+<%- include('./includes/top.ejs') %>
+</head>
+<body>
+    
+    <%- include('./includes/navigation.ejs') %>
+    <main>
+        <form>
+            <h1>Add a Product</h1>
+            <div>
+                <label for="name">Name:</label>
+                <input name="name" type="text" placeholder="Enter product name" />
+            </div>
+            <div>
+                <label for="price">Price:</label>
+                <input name="price" type="text" placeholder="Enter product name" />
+            </div>
+            <div>
+                <label for="img">imageUrl:</label>
+                <input name="img" type="text" placeholder="Enter image url" />
+            </div>
+            <div>
+                <label for="desc">Description:</label>
+                <textarea name="desc" placeholder="Enter product name" ></textarea>
+            </div>
+            <button>Add Product</button>
+            
+
+        </form>
+    </main>
+   <%- include('./includes/bottom.ejs') %>
