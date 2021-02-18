@@ -58,7 +58,7 @@ header a{
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 }
-.product{
+.products-container > .product{
     border: 2px solid black;
     border-radius: 5px;
     padding: 1rem;
