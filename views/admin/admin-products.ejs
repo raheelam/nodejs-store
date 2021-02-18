@@ -1,0 +1,50 @@
+<%- include('../includes/top.ejs') %>
+</head>
+<body>
+    
+    <%- include('../includes/navigation.ejs') %>
+    <main>
+    <h1>Products</h1>
+    
+<div class="products-container">
+    <div class="product">
+        <h1>Product</h1>
+        <img alt="product" src="">
+        <h3>Price: 60</h3>
+        
+        <form action="/admin/edit-product" method="POST">
+            <a href="/admin/edit-product" class="btn"> Edit</a>
+            <button class="btn" type="submit">Delete</button>
+        </form>
+        
+    </div>
+    <div class="product">
+        <h1>Product</h1>
+        <img alt="product" src="https://tse1.mm.bing.net/th?id=OIP.k_6eqS0GbcrL8dg-22eqHgHaF_&pid=Api&P=0&w=198&h=161">
+        <h3>Price: 60</h3>
+        <form action="/admin/edit-product" method="POST">
+            <a href="/admin/edit-product" class="btn"> Edit</a>
+            <button class="btn" type="submit">Delete</button>
+        </form>
+    </div>
+    <div class="product">
+     <h1>Product</h1>
+     <img alt="product" src="">
+     <h3>Price: 60</h3>
+     <form action="/admin/edit-product" method="POST">
+        <a href="/admin/edit-product" class="btn"> Edit</a>
+        <button class="btn" type="submit">Delete</button>
+    </form>
+    </div>
+    <div class="product">
+     <h1>Product</h1>
+     <img alt="product" src="">
+     <h3>Price: 60</h3>
+     <form action="/admin/edit-product" method="POST">
+        <a href="/admin/edit-product" class="btn"> Edit</a>
+        <button class="btn" type="submit">Delete</button>
+    </form>
+    </div>
+ </div>
+    </main>
+   <%- include('../includes/bottom.ejs') %>

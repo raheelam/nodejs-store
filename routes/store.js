@@ -1,29 +1,15 @@
 const express = require('express');
 const route = express.Router();
-const path = require('path');
 
-route.get("/", (req, res, next)=>{
-    res.render(path.join(__dirname, '../', 'views', 'index.ejs'));
+const storeController = require('../controllers/store');
 
-});
+route.get("/", storeController.getProducts);
 
-route.get("/product-details", (req, res, next)=>{
-    res.render(path.join(__dirname, '../', 'views', 'product-details.ejs'));
+route.get("/product-details", storeController.getProductDetails );
 
-});
-
-route.get("/cart", (req, res, next)=>{
-    res.render(path.join(__dirname, '../', 'views', 'cart.ejs'));
-
-});
-route.post("/add-to-cart", (req, res, next)=>{
-    res.redirect('/');
-
-});
-route.post("/remove-from-cart", (req, res, next)=>{
-    res.redirect('/cart');
-
-});
+route.get("/cart", storeController.getCart);
+route.post("/add-to-cart", storeController.addToCart );
+route.post("/remove-from-cart", storeController.removeFromCart);
 
 
 module.exports = route;
