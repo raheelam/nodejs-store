@@ -4,23 +4,23 @@
     
     <%- include('../includes/navigation.ejs') %>
     <main>
-        <form>
+        <form action="/admin/add-product" method="POST">
             <h1>Add a Product</h1>
             <div class="form-field">
-                <label for="name">Name:</label>
-                <input name="name" type="text" placeholder="Enter product name" />
+                <label for="title">Title:</label>
+                <input name="title" type="text" placeholder="Enter product name" />
             </div>
             <div class="form-field">
                 <label for="price">Price:</label>
                 <input name="price" type="text" placeholder="Enter product name" />
             </div>
             <div class="form-field">
-                <label for="img">Image Url:</label>
-                <input name="img" type="text" placeholder="Enter image url" />
+                <label for="imageUrl">Image Url:</label>
+                <input name="imageUrl" type="text" placeholder="Enter image url" />
             </div>
             <div class="form-field">
-                <label for="desc">Description:</label>
-                <textarea name="desc" placeholder="Enter product description" ></textarea>
+                <label for="description">Description:</label>
+                <textarea name="description" placeholder="Enter product description" ></textarea>
             </div>
             <button type="submit" class="btn">Add Product</button>
             

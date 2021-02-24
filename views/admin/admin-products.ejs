@@ -6,45 +6,19 @@
     <main>
     <h1>Products</h1>
     
-<div class="products-container">
-    <div class="product">
-        <h1>Product</h1>
-        <img alt="product" src="">
-        <h3>Price: 60</h3>
-        
-        <form action="/admin/edit-product" method="POST">
-            <a href="/admin/edit-product" class="btn"> Edit</a>
-            <button class="btn" type="submit">Delete</button>
-        </form>
-        
-    </div>
-    <div class="product">
-        <h1>Product</h1>
-        <img alt="product" src="https://tse1.mm.bing.net/th?id=OIP.k_6eqS0GbcrL8dg-22eqHgHaF_&pid=Api&P=0&w=198&h=161">
-        <h3>Price: 60</h3>
-        <form action="/admin/edit-product" method="POST">
-            <a href="/admin/edit-product" class="btn"> Edit</a>
-            <button class="btn" type="submit">Delete</button>
-        </form>
-    </div>
-    <div class="product">
-     <h1>Product</h1>
-     <img alt="product" src="">
-     <h3>Price: 60</h3>
-     <form action="/admin/edit-product" method="POST">
-        <a href="/admin/edit-product" class="btn"> Edit</a>
-        <button class="btn" type="submit">Delete</button>
-    </form>
-    </div>
-    <div class="product">
-     <h1>Product</h1>
-     <img alt="product" src="">
-     <h3>Price: 60</h3>
-     <form action="/admin/edit-product" method="POST">
-        <a href="/admin/edit-product" class="btn"> Edit</a>
-        <button class="btn" type="submit">Delete</button>
-    </form>
-    </div>
- </div>
+    <div class="products-container">
+        <% for(product of prods){ %>
+        <div class="product">
+            <h1><%= product.title %></h1>
+            <img alt=<%= product.title%> src=<%=product.imageUrl%> />
+            <h3><%= product.price %></h3>
+            <a href="/admin/edit-product/<%=product._id%>?edit=true" class="btn"> Edit</a>
+            <form action="/admin/delete-product" method="POST">
+                <input type="text" hidden value=<%=product._id%> />
+                <button class="btn" type="submit">Delete</button>
+            </form>
+        </div>
+        <% } %>
+     </div>
     </main>
    <%- include('../includes/bottom.ejs') %>

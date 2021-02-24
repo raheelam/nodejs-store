@@ -8,7 +8,7 @@ route.get("/products", adminController.getProducts);
 route.get("/add-product", adminController.getAddProduct);
 route.post("/add-product", adminController.postAddProduct);
 
-route.get("/edit-product", adminController.getEditProduct );
+route.get("/edit-product/:productId", adminController.getEditProduct );
 route.post("/edit-product", adminController.postEditProduct);
 route.post("/delete-product", adminController.postDeleteProduct);
 

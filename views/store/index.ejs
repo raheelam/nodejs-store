@@ -5,6 +5,19 @@
     <%- include('../includes/navigation.ejs') %>
     <main>
     <h1>Products</h1>
-   <%- include('../includes/products.ejs') %>
+    <div class="products-container">
+        <% for(product of prods){ %>
+        <div class="product">
+            <h1><%= product.title %></h1>
+            <img alt=<%= product.title%> src=<%=product.imageUrl%> />
+            <h3><%= product.price %></h3>
+            <a href="/product-details" class="btn">Details</a>
+            <form action="/add-to-cart" method="POST">
+                <input type="text" hidden value=<%=product._id%> />
+                <button class="btn" type="submit">Add to cart</button>
+            </form>
+        </div>
+        <% } %>
+     </div>
     </main>
    <%- include('../includes/bottom.ejs') %>
