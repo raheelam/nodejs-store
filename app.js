@@ -1,3 +1,4 @@
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
@@ -23,7 +24,7 @@ app.use((req,res,next)=>{
     res.status(404).send("<h1>Page Not Found.</h1>");
 });
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then((result)=>{
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then((result)=>{
     app.listen(5000);
 }).catch((err)=>console.log(err));
 
