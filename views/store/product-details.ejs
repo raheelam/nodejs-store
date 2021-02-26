@@ -10,9 +10,12 @@
             <img alt="product" src="" />
             <p>Price: 60</p>
             <p>description: bal blah blah blah blah blah blah</p>
+            <% if (isAuthenticated) { %>
             <form action="/add-to-cart" method="POST">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                 <button class="btn" type="submit">Add to cart</button>
             </form>
+            <% } %>
         </div>
     
     </main>

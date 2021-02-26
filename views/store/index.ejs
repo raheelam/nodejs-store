@@ -12,11 +12,12 @@
             <img alt=<%= product.title%> src=<%=product.imageUrl%> />
             <h3><%= product.price %></h3>
             <a href="/product-details" class="btn">Details</a>
-            <form action="/add-to-cart" method="POST">
-                <input type="text" hidden value=<%=product._id%> />
-                <button class="btn" type="submit">Add to cart</button>
-            </form>
-        </div>
+            <% if (isAuthenticated) { %>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn" type="submit">Add to cart</button>
+                </form>
+                <% } %>
         <% } %>
      </div>
     </main>

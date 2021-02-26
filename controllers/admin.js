@@ -1,5 +1,5 @@
 
-const Product = require('../models/products');
+const Product = require('../models/product');
 const path = require('path');
 
 exports.getProducts = (req, res, next) =>{
