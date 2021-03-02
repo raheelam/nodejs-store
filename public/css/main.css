@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  padding: 1rem;
+  padding: 0 1rem;
   margin: auto;
 }
 
@@ -24,11 +24,12 @@ form {
 }
 
 .image {
-  height: 20rem;
+  height: 15rem;
 }
 
 .image img {
   height: 100%;
+  width: 100%;
 }
 
 .main-header {
@@ -163,10 +164,19 @@ form {
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
+  padding: 1rem;
+    
+  max-width: 90%;
+  margin:0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}
+
+.pDetail{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 55% 45%;
 }
 
 .card {
@@ -194,7 +204,7 @@ form {
 }
 
 .card__actions {
-  padding: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -263,16 +273,16 @@ form {
 }
 
 .pagination {
-  margin-top: 2rem;
+  
   text-align: center;
 }
 
 .pagination a {
   text-decoration: none;
   color: #00695c;
-  padding: 0.5rem;
+  padding: 0.2rem;
   border: 1px solid #00695c;
-  margin: 0 1rem;
+  margin: 0 0.3rem;
 }
 
 .pagination a:hover,

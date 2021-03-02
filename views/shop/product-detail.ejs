@@ -6,13 +6,19 @@
         <main class="centered">
             <h1><%= product.title %></h1>
             <hr>
+            <div class="pDetail">
             <div class="image">
                 <img src="/<%= product.imageUrl %>" alt="<%= product.title %>">
             </div>
-            <h2><%= product.price %></h2>
-            <p><%= product.description %></p>
+            <div>
+            <h2><span>Price: </span><%= product.price %></h2>
             <% if (isAuthenticated) { %>
                 <%- include('../includes/add-to-cart.ejs', {product: product}) %>
             <% } %>
+            <h3>Description: </h3>
+            <p><%= product.description %></p>
+            
+        </div>
+        </div>
         </main>
         <%- include('../includes/end.ejs') %>

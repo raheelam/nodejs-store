@@ -8,7 +8,7 @@ const PDFDocument = require('pdfkit');
 const Product = require('../models/product');
 const Order = require('../models/order');
 
-const ITEMS_PER_PAGE = 2;
+const ITEMS_PER_PAGE = 4;
 
 exports.getProducts = (req, res, next) => {
   const page = +req.query.page || 1;
@@ -104,6 +104,7 @@ exports.getCart = (req, res, next) => {
       });
     })
     .catch(err => {
+      console.log(err);
       const error = new Error(err);
       error.httpStatusCode = 500;
       return next(error);
@@ -179,6 +180,7 @@ exports.getCheckout = (req, res, next) => {
       });
     })
     .catch(err => {
+      console.log(err);
       const error = new Error(err);
       error.httpStatusCode = 500;
       return next(error);

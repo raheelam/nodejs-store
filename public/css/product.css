@@ -37,3 +37,7 @@
     
     height: 7rem;
   }
+
+  .card__actions .btn:first-child{
+      margin-bottom: 0.5rem;
+  }
